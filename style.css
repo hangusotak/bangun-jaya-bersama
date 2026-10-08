@@ -14,7 +14,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{font-family:var(--font);color:var(--text);background:var(--white);line-height:1.65;font-size:1.05rem}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .wrap{width:min(1120px,92%);margin-inline:auto}
 :focus-visible{outline:3px solid var(--orange);outline-offset:3px}
@@ -98,6 +98,7 @@ nav a:hover{color:var(--orange)}
 .contact address{font-style:normal}
 .contact p{margin-bottom:.9rem}
 .contact a{color:var(--orange)}
+.contact a.btn{color:var(--navy)}
 .box{background:var(--navy-2);padding:2rem;border-top:5px solid var(--orange)}
 .box h3{font-size:1.8rem;margin-bottom:.6rem}
 
