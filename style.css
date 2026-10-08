@@ -25,7 +25,7 @@ section{padding:5rem 0}
 /* Tombol */
 .btn{display:inline-block;padding:.85rem 1.8rem;font-weight:700;text-decoration:none;
   background:var(--orange);color:var(--navy);transform:skewX(-12deg);transition:background .2s}
-.btn span{display:inline-block;transform:skewX(12deg);color:#fff}
+.btn span{display:inline-block;transform:skewX(12deg)}
 .btn:hover{background:#ffa04d}
 .btn.ghost{background:transparent;color:var(--white);border:2px solid var(--white)}
 .btn.ghost:hover{background:var(--white);color:var(--navy)}
