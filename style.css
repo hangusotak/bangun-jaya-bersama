@@ -1,0 +1,124 @@
+/* ===== Warna diambil dari company profile PDF ===== */
+:root{
+  --navy:#13132e;      /* latar halaman gelap di PDF */
+  --navy-2:#1c1c42;
+  --orange:#f58220;    /* aksen oranye PDF */
+  --rust:#c0502a;      /* oranye bata sampul PDF */
+  --blue:#3558b8;      /* biru logo BJB */
+  --gray:#e6e7e9;      /* abu-abu sampul PDF */
+  --white:#fff;
+  --text:#2a2a3c;
+  --font:'Barlow',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --head:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--font);color:var(--text);background:var(--white);line-height:1.65;font-size:1.05rem}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:.01em}
+h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:1rem}
+section{padding:5rem 0}
+
+/* Tombol */
+.btn{display:inline-block;padding:.85rem 1.8rem;font-weight:700;text-decoration:none;
+  background:var(--orange);color:var(--navy);transform:skewX(-12deg);transition:background .2s}
+.btn span{display:inline-block;transform:skewX(12deg)}
+.btn:hover{background:#ffa04d}
+.btn.ghost{background:transparent;color:var(--white);border:2px solid var(--white)}
+.btn.ghost:hover{background:var(--white);color:var(--navy)}
+
+/* Header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--navy);border-bottom:3px solid var(--orange)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--white);
+  font-family:var(--head);font-size:1.35rem;letter-spacing:.08em}
+.brand img{height:46px;width:auto}
+nav ul{display:flex;gap:1.6rem;list-style:none}
+nav a{color:var(--white);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--orange)}
+.burger{display:none;background:none;border:0;color:var(--white);font-size:1.8rem;cursor:pointer}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--white);padding:8.5rem 0 5rem;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-8%;top:0;bottom:0;width:48%;
+  background:var(--rust);transform:skewX(-14deg)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;position:relative}
+.hero h1{font-size:clamp(2.6rem,6.5vw,4.8rem);text-transform:none}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p{max-width:34rem;margin:1.2rem 0 2rem;color:#d9d9e6}
+.hero .actions{display:flex;gap:1rem;flex-wrap:wrap}
+.hero img{width:100%;aspect-ratio:1/1;object-fit:cover;border:6px solid var(--white)}
+
+/* Tentang */
+.about{background:var(--gray)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.about figure{position:relative}
+.about figure::after{content:"";position:absolute;inset:auto -14px -14px auto;width:60%;height:60%;
+  background:var(--orange);z-index:0;transform:skewX(-8deg)}
+.about img{position:relative;z-index:1;width:100%;border:6px solid var(--white)}
+.about p+p{margin-top:1rem}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.6rem}
+.facts div{background:var(--white);padding:.9rem 1rem;border-left:5px solid var(--orange)}
+.facts b{display:block;font-family:var(--head);font-size:1.4rem;color:var(--navy)}
+
+/* Visi Misi */
+.vm{background:var(--navy);color:var(--white)}
+.vm .grid{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem}
+.vm h2{color:var(--orange)}
+.vm ul{padding-left:1.2rem}
+.vm li{margin-bottom:.8rem}
+
+/* Layanan */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem}
+.card{padding:1.6rem;background:var(--gray);border-top:5px solid var(--rust)}
+.card:nth-child(even){border-top-color:var(--orange)}
+.card h3{font-size:1.6rem;color:var(--navy);margin-bottom:.5rem}
+.card p{font-size:.98rem}
+
+/* Legalitas */
+.legal{background:var(--gray)}
+.legal dl{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
+.legal dl div{background:var(--white);padding:1.1rem 1.3rem;border-left:5px solid var(--blue)}
+.legal dt{font-weight:700;color:var(--navy)}
+.legal dd{word-break:break-word}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem;list-style:none}
+.chips li{background:var(--navy);color:var(--white);padding:.4rem 1rem;font-size:.95rem}
+
+/* Mitra */
+.partners ul{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;list-style:none;margin-top:2rem}
+.partners li{border:2px solid var(--navy);padding:.9rem;text-align:center;font-weight:600;color:var(--navy)}
+
+/* Kontak */
+.contact{background:var(--navy);color:var(--white)}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact h2{color:var(--orange)}
+.contact address{font-style:normal}
+.contact p{margin-bottom:.9rem}
+.contact a{color:var(--orange)}
+.box{background:var(--navy-2);padding:2rem;border-top:5px solid var(--orange)}
+.box h3{font-size:1.8rem;margin-bottom:.6rem}
+
+footer{background:#0d0d20;color:#aaa;text-align:center;padding:1.4rem 0;font-size:.9rem}
+
+/* ===== Responsive ===== */
+@media (max-width:900px){
+  .hero .wrap,.about .wrap,.vm .grid,.contact .grid{grid-template-columns:1fr}
+  .hero::before{width:70%;right:-30%}
+  .grid3{grid-template-columns:1fr 1fr}
+  .partners ul{grid-template-columns:repeat(2,1fr)}
+  .legal dl{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  section{padding:3.5rem 0}
+  .burger{display:block}
+  nav{position:absolute;top:70px;left:0;right:0;background:var(--navy);display:none;border-bottom:3px solid var(--orange)}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0}
+  nav a{display:block;padding:1rem 4%}
+  .brand span{font-size:1.05rem}
+  .grid3{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
